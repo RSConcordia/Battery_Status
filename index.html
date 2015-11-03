@@ -28,11 +28,15 @@
     //
     function onBatteryStatus(info) {
 		alert('#3');
-        console.log("Level: " + info.level + " isPlugged: " + info.isPlugged);
+        //console.log("Level: " + info.level + " isPlugged: " + info.isPlugged);
+		document.getElementById('div').innerHTML = "Level: " + info.level + " isPlugged: " + info.isPlugged;
     }
 
     </script>
   </head>
-  <body onload="onLoad()">
+  <body onload="onLoad()">	
+		Battery Status
+		<div id = 'div' name='div'>
+		</div>
   </body>
 </html>
