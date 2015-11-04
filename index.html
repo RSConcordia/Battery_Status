@@ -10,26 +10,20 @@
     <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
     <script type="text/javascript" charset="utf-8">
 
-    // Wait for device API libraries to load
-    //
     function onLoad() {
-		alert('#1');
         document.addEventListener("deviceready", onDeviceReady, false);
     }
-
-    // device APIs are available
-    //
     function onDeviceReady() {
-		alert('#2');
         window.addEventListener("batterystatus", onBatteryStatus, false);
     }
-
-    // Handle the batterystatus event
-    //
     function onBatteryStatus(info) {
-		alert('#3');
-        //console.log("Level: " + info.level + " isPlugged: " + info.isPlugged);
 		document.getElementById('div').innerHTML = "Level: " + info.level + " isPlugged: " + info.isPlugged;
+		
+		if (info.isPlugged == 'false'){
+			alert("Plugado");
+		}else{
+			alert("Desplugado");
+		}
     }
 
     </script>

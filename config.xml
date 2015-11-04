@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <widget xmlns     = "http://www.w3.org/ns/widgets" xmlns:gap = "http://phonegap.com/ns/1.0"
-        id="br.dotter.bluetooth"
+        id="br.dotter.battery"
         version   = "1.0.0">
 		
     <name>Battery Status</name>
@@ -12,7 +12,8 @@
     Dotter do Brasil Ltda
     </author>
 	
-	<!--plugin name="Battery" value="com.phonegap.BatteryListener"/-->
+	<!--https://cordova.apache.org/docs/en/3.0.0/cordova/events/events.batterystatus.html-->
+	
 	<gap:plugin name="org.apache.cordova.battery-status" version="0.2.11" />
     <gap:plugin name="org.apache.cordova.device" />
 		
