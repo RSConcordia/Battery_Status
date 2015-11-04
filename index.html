@@ -19,7 +19,9 @@
     function onBatteryStatus(info) {
 		document.getElementById('div').innerHTML = "Level: " + info.level + " isPlugged: " + info.isPlugged;
 		
-		if (info.isPlugged == 'false'){
+	//	var bt = info.isPlugged;
+		
+		if (info.isPlugged == false){
 			alert("Plugado");
 		}else{
 			alert("Desplugado");
